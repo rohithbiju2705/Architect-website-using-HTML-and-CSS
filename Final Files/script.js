@@ -1,16 +1,16 @@
-window.onload = () => {
-  setTimeout(() => {
-    document.querySelector("body").classList.add("display");
+window.onload = function () {
+  setTimeout(function () {
+    document.body.classList.add("display");
   }, 4000);
 };
 
-document.querySelector(".hamburger-menu").addEventListener("click", () => {
+document.querySelector(".hamburger-menu").onclick = function () {
   document.querySelector(".container").classList.toggle("change");
-});
+};
 
-document.querySelector(".scroll-btn").addEventListener("click", () => {
-  document.querySelector("html").style.scrollBehavior = "smooth";
-  setTimeout(() => {
-    document.querySelector("html").style.scrollBehavior = "unset";
+document.querySelector(".scroll-btn").onclick = function () {
+  document.documentElement.style.scrollBehavior = "smooth";
+  setTimeout(function () {
+    document.documentElement.style.scrollBehavior = "auto";
   }, 1000);
-});
+};
